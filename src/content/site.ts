@@ -13,23 +13,26 @@ export const siteConfig = {
 };
 
 // Build mailto link with pre-filled content
-const emailSubject = encodeURIComponent("Inquiring About Your Services");
-const emailBody = encodeURIComponent(`Hi Alyssa,
+const emailSubject = encodeURIComponent("New Event Inquiry");
+const emailBody = encodeURIComponent(`────────────────────────────
+YOUR DETAILS
+Name: 
+Email: 
+Phone: 
 
-I'm interested in working with you for an upcoming event, and would love to hear about the services you offer!
+EVENT INFORMATION
+Event Type (corporate, birthday, shower, etc.): 
+Date or Timeframe: 
+Location (if known): 
+Estimated Guest Count: 
 
-First Name: 
-Event Type: 
-Date: 
-Location: 
-Guest Count: 
+YOUR VISION
+Tell me a little about what you're envisioning: 
 
-A little about my vision...
-
-
-Follow-up Preference (Email/Phone/Text):
-Phone Number: 
-Best Time to Call (if applicable): 
+CONTACT PREFERENCE
+Preferred follow-up method (email/phone/text): 
+Best time to reach you: 
+────────────────────────────
 `);
 export const inquireLink = `mailto:${siteConfig.inquireEmail}?subject=${emailSubject}&body=${emailBody}`;
 
@@ -159,7 +162,7 @@ export const homePage = {
   },
   finalCta: {
     heading: "Let's design something unforgettable.",
-    subheading: "Limited events accepted each year to ensure every celebration receives the attention it deserves.",
+    subheading: "I'd love to hear what you're dreaming up — let's chat!",
     buttonText: "Start Your Inquiry",
     buttonLink: inquireLink,
   },
