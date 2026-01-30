@@ -16,9 +16,9 @@ export default function PortfolioCard({ item }: PortfolioCardProps) {
     >
       <article>
         {/* Image */}
-        <div className="relative aspect-[4/3] overflow-hidden bg-light-sage rounded-sm mb-4">
-          {/* Placeholder background - using Light Sage #BDD19E */}
-          <div className="absolute inset-0 bg-light-sage" />
+        <div className="relative aspect-[4/3] overflow-hidden bg-mint rounded-sm mb-4">
+          {/* Placeholder background - Light sage mint #DCE6D4 */}
+          <div className="absolute inset-0 bg-mint" />
           <Image
             src={item.thumbnail}
             alt={item.title}
@@ -30,29 +30,29 @@ export default function PortfolioCard({ item }: PortfolioCardProps) {
               target.style.display = "none";
             }}
           />
-          {/* Hover Overlay - using Dusty Teal #6D8682 */}
-          <div className="absolute inset-0 bg-dusty-teal/0 group-hover:bg-dusty-teal/20 transition-colors duration-300" />
+          {/* Hover Overlay */}
+          <div className="absolute inset-0 bg-forest/0 group-hover:bg-forest/20 transition-colors duration-300" />
         </div>
 
         {/* Content */}
         <div>
-          {/* Category - using Warm Tan #B89068 */}
-          <span className="text-xs font-sans tracking-wider uppercase text-warm-tan font-medium">
+          {/* Category - Terracotta accent */}
+          <span className="text-xs font-sans tracking-wider uppercase text-terracotta font-medium">
             {item.category}
           </span>
 
-          {/* Title - using Dusty Teal #6D8682 */}
-          <h3 className="font-serif text-lg md:text-xl text-dusty-teal mt-2 group-hover:text-olive-sage transition-colors">
+          {/* Title - Charcoal text */}
+          <h3 className="font-serif text-lg md:text-xl text-charcoal mt-2 group-hover:text-sage-dark transition-colors">
             {item.title}
           </h3>
 
           {/* Tagline */}
-          <p className="text-sm text-dusty-teal mt-2 line-clamp-2">
+          <p className="text-sm text-text-body mt-2 line-clamp-2">
             {item.tagline}
           </p>
 
-          {/* View Project Link - using Olive Sage #88996E */}
-          <span className="inline-flex items-center gap-2 text-sm font-sans text-olive-sage mt-4 group-hover:text-warm-tan transition-colors">
+          {/* View Project Link - Sage green */}
+          <span className="inline-flex items-center gap-2 text-sm font-sans text-sage-dark mt-4 group-hover:text-terracotta transition-colors">
             View Project
             <svg
               className="w-4 h-4 transition-transform group-hover:translate-x-1"

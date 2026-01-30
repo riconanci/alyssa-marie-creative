@@ -22,7 +22,7 @@ export default function Navbar() {
   };
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-warm-beige/95 backdrop-blur-sm border-b border-olive-sage/20">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-mint-cream/95 backdrop-blur-sm border-b border-sage/20">
       <Container>
         <nav className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
@@ -44,7 +44,7 @@ export default function Navbar() {
                 <a
                   key={item.name}
                   href={item.href}
-                  className="text-sm font-sans tracking-wide transition-colors text-dusty-teal hover:text-warm-tan"
+                  className="text-sm font-sans tracking-wide transition-colors text-text-body hover:text-terracotta"
                 >
                   {item.name}
                 </a>
@@ -55,8 +55,8 @@ export default function Navbar() {
                   aria-current={isActive(item.href) ? "page" : undefined}
                   className={`text-sm font-sans tracking-wide transition-colors ${
                     isActive(item.href)
-                      ? "text-olive-sage font-medium"
-                      : "text-dusty-teal hover:text-warm-tan"
+                      ? "text-sage-dark font-medium"
+                      : "text-text-body hover:text-terracotta"
                   }`}
                 >
                   {item.name}
@@ -68,7 +68,7 @@ export default function Navbar() {
           {/* Mobile Menu Button */}
           <button
             type="button"
-            className="md:hidden p-2 -mr-2 text-dusty-teal hover:text-olive-sage transition-colors"
+            className="md:hidden p-2 -mr-2 text-charcoal hover:text-sage-dark transition-colors"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
             aria-expanded={mobileMenuOpen}
@@ -100,7 +100,7 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       {mobileMenuOpen && (
-        <div className="md:hidden bg-warm-beige border-t border-olive-sage/20 shadow-lg">
+        <div className="md:hidden bg-mint-cream border-t border-sage/20 shadow-lg">
           <Container>
             <div className="py-4 space-y-1">
               {navigation.map((item) =>
@@ -108,7 +108,7 @@ export default function Navbar() {
                   <a
                     key={item.name}
                     href={item.href}
-                    className="block py-3 text-base font-sans tracking-wide transition-colors text-dusty-teal hover:text-warm-tan"
+                    className="block py-3 text-base font-sans tracking-wide transition-colors text-text-body hover:text-terracotta"
                     onClick={() => setMobileMenuOpen(false)}
                   >
                     {item.name}
@@ -120,8 +120,8 @@ export default function Navbar() {
                     aria-current={isActive(item.href) ? "page" : undefined}
                     className={`block py-3 text-base font-sans tracking-wide transition-colors ${
                       isActive(item.href)
-                        ? "text-olive-sage font-medium"
-                        : "text-dusty-teal hover:text-warm-tan"
+                        ? "text-sage-dark font-medium"
+                        : "text-text-body hover:text-terracotta"
                     }`}
                     onClick={() => setMobileMenuOpen(false)}
                   >

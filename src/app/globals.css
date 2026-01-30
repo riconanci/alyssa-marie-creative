@@ -10,59 +10,57 @@
 /* Custom Theme Configuration for Tailwind v4 */
 @theme {
   /* ========================================
-     COLOR PALETTE - Earth Tone "Paradise on Earth"
-     STRICTLY using only these 6 colors:
-     #6D8682, #88996E, #BDD19E, #B1C9CA, #E4D2C0, #B89068
+     COLOR PALETTE - Original Earth Tone Sage
+     Warm, elegant, sophisticated
      ======================================== */
   
-  /* The 6 Core Colors */
-  --color-dusty-teal: #6D8682;        /* Dark teal-gray */
-  --color-olive-sage: #88996E;        /* Olive green */
-  --color-light-sage: #BDD19E;        /* Light green */
-  --color-dusty-blue: #B1C9CA;        /* Soft blue */
-  --color-warm-beige: #E4D2C0;        /* Warm cream/beige */
-  --color-warm-tan: #B89068;          /* Caramel/tan accent */
+  /* Primary Sage Green Family */
+  --color-sage: #A3B18A;              /* Core brand sage green */
+  --color-sage-light: #B5C4A0;        /* Lighter sage */
+  --color-sage-dark: #8A9A72;         /* Darker sage for hover */
+  --color-sage-soft: #C5D4B0;         /* Soft sage for backgrounds */
   
-  /* Mapped to site variables (using only the 6 colors) */
+  /* Light Green/Mint Backgrounds */
+  --color-mint-cream: #F5F1EB;        /* Lightest - main background (warm cream) */
+  --color-mint-light: #E8EFE3;        /* Light sections */
+  --color-mint: #DCE6D4;              /* Card backgrounds, placeholders */
   
-  /* Primary Sage Family */
-  --color-sage: #88996E;              /* Olive sage */
-  --color-sage-light: #BDD19E;        /* Light sage */
-  --color-sage-dark: #6D8682;         /* Dusty teal */
-  
-  /* Backgrounds */
-  --color-mint-cream: #E4D2C0;        /* Warm beige - main background */
-  --color-mint-light: #B1C9CA;        /* Dusty blue - alternate sections */
-  --color-mint: #BDD19E;              /* Light sage - card backgrounds */
-  
-  /* Deep Colors (buttons, footer, text) */
-  --color-forest: #6D8682;            /* Dusty teal - primary buttons */
-  --color-forest-light: #88996E;      /* Olive sage - button hover */
+  /* Deep Greens (buttons, footer, text) */
+  --color-forest: #3D5244;            /* Primary buttons, footer */
+  --color-forest-light: #4A6350;      /* Button hover */
   
   /* Text Colors */
-  --color-charcoal: #6D8682;          /* Dusty teal - primary text */
-  --color-text-body: #6D8682;         /* Dusty teal - body text */
-  --color-text-muted: #88996E;        /* Olive sage - muted text */
+  --color-charcoal: #2C3830;          /* Primary headings */
+  --color-text-body: #4A5D4E;         /* Body text */
+  --color-text-muted: #6B7D6E;        /* Muted/secondary text */
   
   /* Accent Colors */
-  --color-terracotta: #B89068;        /* Warm tan - primary accent */
-  --color-terracotta-dark: #B89068;   /* Warm tan */
-  --color-gold: #B89068;              /* Warm tan */
-  --color-copper: #B89068;            /* Warm tan */
-  --color-blush: #E4D2C0;             /* Warm beige */
+  --color-terracotta: #C4724C;        /* Warm terracotta accent */
+  --color-terracotta-dark: #A85E3C;   /* Darker terracotta */
+  --color-gold: #C9A227;              /* Golden accent (logo shimmer) */
+  --color-copper: #B87333;            /* Copper accent */
+  --color-blush: #E8D5C4;             /* Soft blush */
   
   /* Neutrals */
-  --color-cream: #E4D2C0;             /* Warm beige */
-  --color-warm-gray: #B1C9CA;         /* Dusty blue */
-  --color-stone: #E4D2C0;             /* Warm beige */
+  --color-cream: #FAF8F5;             /* Pure cream white */
+  --color-warm-gray: #A8A8A0;         /* Warm neutral gray */
+  --color-stone: #D4CFC7;             /* Warm stone */
 
-  /* Legacy mappings for compatibility */
-  --color-olive-charcoal: #6D8682;
-  --color-soft-sand: #E4D2C0;
-  --color-warm-stone: #E4D2C0;
-  --color-taupe-gray: #88996E;
-  --color-eucalyptus: #88996E;
-  --color-champagne: #B89068;
+  /* Legacy/compatibility mappings */
+  --color-olive-charcoal: #3D5244;
+  --color-soft-sand: #F5F1EB;
+  --color-warm-stone: #D4CFC7;
+  --color-taupe-gray: #6B7D6E;
+  --color-eucalyptus: #5A7A5E;
+  --color-champagne: #E8D5C4;
+  
+  /* New color name mappings for component compatibility */
+  --color-dusty-teal: #3D5244;        /* Maps to forest */
+  --color-olive-sage: #A3B18A;        /* Maps to sage */
+  --color-light-sage: #DCE6D4;        /* Maps to mint */
+  --color-dusty-blue: #E8EFE3;        /* Maps to mint-light */
+  --color-warm-beige: #F5F1EB;        /* Maps to mint-cream */
+  --color-warm-tan: #C4724C;          /* Maps to terracotta */
 
   /* Typography */
   --font-serif: 'Cormorant Garamond', Georgia, serif;
@@ -90,8 +88,8 @@ html {
 
 body {
   font-family: var(--font-sans);
-  background-color: var(--color-warm-beige);
-  color: var(--color-dusty-teal);
+  background-color: var(--color-mint-cream);
+  color: var(--color-text-body);
   line-height: 1.7;
   letter-spacing: 0.01em;
   -webkit-font-smoothing: antialiased;
@@ -104,7 +102,7 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 500;
   line-height: 1.2;
   letter-spacing: -0.01em;
-  color: var(--color-dusty-teal);
+  color: var(--color-charcoal);
 }
 
 h1 { font-size: var(--font-size-h1); }
@@ -113,7 +111,7 @@ h3 { font-size: var(--font-size-h3); }
 h4 { font-size: var(--font-size-h4); }
 
 p {
-  color: var(--color-dusty-teal);
+  color: var(--color-text-body);
 }
 
 a {
@@ -121,12 +119,12 @@ a {
 }
 
 ::selection {
-  background-color: var(--color-olive-sage);
-  color: var(--color-warm-beige);
+  background-color: var(--color-sage);
+  color: var(--color-cream);
 }
 
 :focus-visible {
-  outline: 2px solid var(--color-warm-tan);
+  outline: 2px solid var(--color-terracotta);
   outline-offset: 2px;
 }
 
@@ -145,16 +143,16 @@ img[data-loading="true"] {
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--color-dusty-blue);
+  background: var(--color-mint-light);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--color-olive-sage);
+  background: var(--color-sage);
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--color-dusty-teal);
+  background: var(--color-sage-dark);
 }
 
 /* Animations */
@@ -200,43 +198,4 @@ img[data-loading="true"] {
   transition: opacity 0.4s ease-out, transform 0.4s ease-out;
 }
 
-/* Logo - Playfair Display, elegant and readable */
-.logo-condensed {
-  display: inline-block;
-  font-family: 'Playfair Display', Georgia, serif !important;
-  font-style: normal;
-  font-weight: 400;
-  transform: scaleX(0.9) scaleY(1.2);
-  transform-origin: left center;
-}
-
-/* Logo Shimmer Effect - Using warm tan */
-@keyframes shimmer {
-  0% {
-    background-position: 200% center;
-  }
-  100% {
-    background-position: -200% center;
-  }
-}
-
-.logo-shimmer {
-  background: linear-gradient(
-    90deg,
-    var(--color-dusty-teal) 0%,
-    var(--color-dusty-teal) 40%,
-    var(--color-warm-tan) 50%,
-    var(--color-dusty-teal) 60%,
-    var(--color-dusty-teal) 100%
-  );
-  background-size: 200% auto;
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: shimmer 7s ease-in-out infinite;
-}
-
-.logo-shimmer:hover {
-  -webkit-text-fill-color: var(--color-olive-sage);
-  background: none;
-}
+/* Logo styles removed - using image logo */

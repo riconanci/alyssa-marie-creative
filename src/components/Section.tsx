@@ -1,7 +1,7 @@
 interface SectionProps {
   children: React.ReactNode;
   className?: string;
-  background?: "warm-beige" | "dusty-blue" | "light-sage" | "olive-sage" | "dusty-teal" | "white" | "mint-cream" | "mint-light" | "mint" | "sage" | "forest" | "cream";
+  background?: "mint-cream" | "mint-light" | "mint" | "white" | "sage" | "forest" | "cream";
   padding?: "none" | "sm" | "md" | "lg";
   id?: string;
 }
@@ -9,28 +9,19 @@ interface SectionProps {
 export default function Section({
   children,
   className = "",
-  background = "warm-beige",
+  background = "mint-cream",
   padding = "lg",
   id,
 }: SectionProps) {
-  // All backgrounds map to our 6 colors:
-  // #6D8682 - Dusty Teal, #88996E - Olive Sage, #BDD19E - Light Sage
-  // #B1C9CA - Dusty Blue, #E4D2C0 - Warm Beige, #B89068 - Warm Tan
+  // Original earth-tone palette backgrounds
   const backgrounds: Record<string, string> = {
-    // New color names (preferred)
-    "warm-beige": "bg-warm-beige text-dusty-teal",
-    "dusty-blue": "bg-dusty-blue text-dusty-teal",
-    "light-sage": "bg-light-sage text-dusty-teal",
-    "olive-sage": "bg-olive-sage text-warm-beige",
-    "dusty-teal": "bg-dusty-teal text-warm-beige",
-    // Legacy names (mapped to new colors)
-    "mint-cream": "bg-warm-beige text-dusty-teal",
-    "mint-light": "bg-dusty-blue text-dusty-teal",
-    "mint": "bg-light-sage text-dusty-teal",
-    "white": "bg-warm-beige text-dusty-teal",
-    "cream": "bg-warm-beige text-dusty-teal",
-    "sage": "bg-olive-sage text-warm-beige",
-    "forest": "bg-dusty-teal text-warm-beige",
+    "mint-cream": "bg-mint-cream text-charcoal",      /* Warm cream background */
+    "mint-light": "bg-mint-light text-charcoal",      /* Light sage sections */
+    "mint": "bg-mint text-charcoal",                  /* Card backgrounds */
+    "white": "bg-cream text-charcoal",                /* Pure white/cream */
+    "cream": "bg-cream text-charcoal",                /* Same as white */
+    "sage": "bg-sage text-cream",                     /* Sage green sections */
+    "forest": "bg-forest text-cream",                 /* Dark green sections */
   };
 
   const paddings = {

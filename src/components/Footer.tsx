@@ -4,24 +4,24 @@ import { siteConfig, footer } from "@/content/site";
 
 export default function Footer() {
   return (
-    <footer className="bg-warm-beige border-t border-olive-sage/20">
+    <footer className="bg-mint-light border-t border-sage/20">
       <Container>
         <div className="py-12 md:py-16">
           {/* Contact */}
           <div className="text-center">
-            <h4 className="font-sans text-sm font-medium tracking-wide uppercase text-olive-sage mb-4">
+            <h4 className="font-sans text-sm font-medium tracking-wide uppercase text-sage-dark mb-4">
               Get in Touch
             </h4>
             <ul className="space-y-2">
               <li>
-                <span className="text-sm text-dusty-teal">
+                <span className="text-sm text-text-body">
                   {siteConfig.location}
                 </span>
               </li>
               <li>
                 <a
                   href={`mailto:${siteConfig.email}`}
-                  className="text-sm text-dusty-teal hover:text-warm-tan transition-colors"
+                  className="text-sm text-text-body hover:text-terracotta transition-colors"
                 >
                   {siteConfig.email}
                 </a>
@@ -31,7 +31,7 @@ export default function Footer() {
                   href={siteConfig.instagramUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-sm text-dusty-teal hover:text-warm-tan transition-colors inline-flex items-center justify-center gap-2"
+                  className="text-sm text-text-body hover:text-terracotta transition-colors inline-flex items-center justify-center gap-2"
                 >
                   <svg
                     className="w-4 h-4"
@@ -52,8 +52,8 @@ export default function Footer() {
           </div>
 
           {/* Bottom Bar */}
-          <div className="mt-10 pt-6 border-t border-olive-sage/20">
-            <p className="text-xs text-dusty-teal text-center">
+          <div className="mt-10 pt-6 border-t border-sage/20">
+            <p className="text-xs text-text-muted text-center">
               {footer.copyright}
             </p>
           </div>

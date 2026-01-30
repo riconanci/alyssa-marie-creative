@@ -69,11 +69,11 @@ export default function GalleryGrid({ images, columns = 3 }: GalleryGridProps) {
           <button
             key={index}
             onClick={() => openLightbox(index)}
-            className="relative aspect-[4/3] overflow-hidden bg-light-sage group cursor-pointer"
+            className="relative aspect-[4/3] overflow-hidden bg-mint group cursor-pointer"
             aria-label={`View ${image.alt}`}
           >
-            {/* Placeholder while image loads - Light Sage #BDD19E */}
-            <div className="absolute inset-0 bg-light-sage animate-pulse" />
+            {/* Placeholder while image loads - Mint #DCE6D4 */}
+            <div className="absolute inset-0 bg-mint animate-pulse" />
             <Image
               src={image.src}
               alt={image.alt}
@@ -86,8 +86,8 @@ export default function GalleryGrid({ images, columns = 3 }: GalleryGridProps) {
                 target.style.display = "none";
               }}
             />
-            {/* Hover Overlay - Dusty Teal #6D8682 */}
-            <div className="absolute inset-0 bg-dusty-teal/0 group-hover:bg-dusty-teal/20 transition-colors duration-300" />
+            {/* Hover Overlay - Forest green */}
+            <div className="absolute inset-0 bg-forest/0 group-hover:bg-forest/20 transition-colors duration-300" />
           </button>
         ))}
       </div>
@@ -95,7 +95,7 @@ export default function GalleryGrid({ images, columns = 3 }: GalleryGridProps) {
       {/* Lightbox */}
       {lightboxOpen && (
         <div 
-          className="fixed inset-0 z-50 bg-dusty-teal/95 flex items-center justify-center"
+          className="fixed inset-0 z-50 bg-forest/95 flex items-center justify-center"
           role="dialog"
           aria-modal="true"
           aria-label="Image lightbox"
@@ -103,7 +103,7 @@ export default function GalleryGrid({ images, columns = 3 }: GalleryGridProps) {
           {/* Close Button */}
           <button
             onClick={closeLightbox}
-            className="absolute top-6 right-6 text-warm-beige hover:text-warm-tan transition-colors"
+            className="absolute top-6 right-6 text-cream hover:text-champagne transition-colors"
             aria-label="Close lightbox (Escape)"
           >
             <svg
@@ -124,7 +124,7 @@ export default function GalleryGrid({ images, columns = 3 }: GalleryGridProps) {
           {/* Previous Button */}
           <button
             onClick={goToPrevious}
-            className="absolute left-6 text-warm-beige hover:text-warm-tan transition-colors"
+            className="absolute left-6 text-cream hover:text-champagne transition-colors"
             aria-label="Previous image (Left arrow)"
           >
             <svg
@@ -156,7 +156,7 @@ export default function GalleryGrid({ images, columns = 3 }: GalleryGridProps) {
           {/* Next Button */}
           <button
             onClick={goToNext}
-            className="absolute right-6 text-warm-beige hover:text-warm-tan transition-colors"
+            className="absolute right-6 text-cream hover:text-champagne transition-colors"
             aria-label="Next image (Right arrow)"
           >
             <svg
@@ -175,7 +175,7 @@ export default function GalleryGrid({ images, columns = 3 }: GalleryGridProps) {
           </button>
 
           {/* Image Counter */}
-          <div className="absolute bottom-6 left-1/2 -translate-x-1/2 text-warm-beige text-sm font-sans">
+          <div className="absolute bottom-6 left-1/2 -translate-x-1/2 text-cream text-sm font-sans">
             {activeIndex + 1} / {images.length}
           </div>
         </div>

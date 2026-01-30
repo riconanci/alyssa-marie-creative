@@ -31,26 +31,26 @@ export default function TestimonialList({ testimonials }: TestimonialListProps) 
     <div className="relative px-4">
       {/* Testimonial Display */}
       <div className="max-w-3xl mx-auto text-center">
-        {/* Quote Icon - Olive Sage */}
+        {/* Quote Icon - Sage */}
         <svg
-          className="w-10 h-10 md:w-12 md:h-12 mx-auto mb-6 md:mb-8 text-olive-sage/60"
+          className="w-10 h-10 md:w-12 md:h-12 mx-auto mb-6 md:mb-8 text-sage/60"
           fill="currentColor"
           viewBox="0 0 24 24"
         >
           <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
         </svg>
 
-        {/* Quote Text - Dusty Teal */}
-        <blockquote className="font-serif text-lg sm:text-xl md:text-2xl text-dusty-teal leading-relaxed mb-6 md:mb-8 transition-opacity duration-300">
+        {/* Quote Text - Charcoal */}
+        <blockquote className="font-serif text-lg sm:text-xl md:text-2xl text-charcoal leading-relaxed mb-6 md:mb-8 transition-opacity duration-300">
           &ldquo;{testimonials[activeIndex].quote}&rdquo;
         </blockquote>
 
-        {/* Author - Dusty Teal */}
+        {/* Author */}
         <div className="font-sans">
-          <p className="font-medium text-dusty-teal">
+          <p className="font-medium text-charcoal">
             {testimonials[activeIndex].author}
           </p>
-          <p className="text-sm text-olive-sage mt-1">
+          <p className="text-sm text-sage-dark mt-1">
             {testimonials[activeIndex].event}
           </p>
         </div>
@@ -60,7 +60,7 @@ export default function TestimonialList({ testimonials }: TestimonialListProps) 
       <div className="flex items-center justify-center gap-4 mt-8 md:mt-10">
         <button
           onClick={goToPrevious}
-          className="p-2 text-olive-sage hover:text-dusty-teal transition-colors"
+          className="p-2 text-sage-dark hover:text-charcoal transition-colors"
           aria-label="Previous testimonial"
         >
           <svg
@@ -78,7 +78,7 @@ export default function TestimonialList({ testimonials }: TestimonialListProps) 
           </svg>
         </button>
 
-        {/* Dots - Olive Sage */}
+        {/* Dots - Sage */}
         <div className="flex gap-2">
           {testimonials.map((_, index) => (
             <button
@@ -86,8 +86,8 @@ export default function TestimonialList({ testimonials }: TestimonialListProps) 
               onClick={() => setActiveIndex(index)}
               className={`w-2 h-2 rounded-full transition-colors ${
                 index === activeIndex
-                  ? "bg-olive-sage"
-                  : "bg-olive-sage/30 hover:bg-olive-sage/50"
+                  ? "bg-sage"
+                  : "bg-sage/30 hover:bg-sage/50"
               }`}
               aria-label={`Go to testimonial ${index + 1}`}
             />
@@ -96,7 +96,7 @@ export default function TestimonialList({ testimonials }: TestimonialListProps) 
 
         <button
           onClick={goToNext}
-          className="p-2 text-olive-sage hover:text-dusty-teal transition-colors"
+          className="p-2 text-sage-dark hover:text-charcoal transition-colors"
           aria-label="Next testimonial"
         >
           <svg

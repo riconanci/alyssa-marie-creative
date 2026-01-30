@@ -22,20 +22,18 @@ export default function Button({
   onClick,
 }: ButtonProps) {
   const baseStyles =
-    "inline-flex items-center justify-center font-sans font-medium tracking-wide rounded-lg transition-all duration-300 ease-out focus:outline-none focus-visible:ring-2 focus-visible:ring-olive-sage focus-visible:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed";
+    "inline-flex items-center justify-center font-sans font-medium tracking-wide rounded-lg transition-all duration-300 ease-out focus:outline-none focus-visible:ring-2 focus-visible:ring-sage focus-visible:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed";
 
-  // All colors from the 6-color palette:
-  // #6D8682 - Dusty Teal, #88996E - Olive Sage, #BDD19E - Light Sage
-  // #B1C9CA - Dusty Blue, #E4D2C0 - Warm Beige, #B89068 - Warm Tan
+  // Original earth-tone color palette
   const variants = {
     primary:
-      "bg-dusty-teal text-warm-beige hover:bg-olive-sage border border-dusty-teal hover:border-olive-sage",
+      "bg-forest text-cream hover:bg-forest-light border border-forest hover:border-forest-light",
     secondary:
-      "bg-olive-sage text-warm-beige hover:bg-dusty-teal border border-olive-sage hover:border-dusty-teal",
+      "bg-sage text-cream hover:bg-sage-dark border border-sage hover:border-sage-dark",
     outline:
-      "bg-transparent text-dusty-teal border-2 border-dusty-teal hover:bg-dusty-teal hover:text-warm-beige",
+      "bg-transparent text-forest border-2 border-forest hover:bg-forest hover:text-cream",
     accent:
-      "bg-warm-tan text-warm-beige hover:bg-olive-sage border border-warm-tan hover:border-olive-sage",
+      "bg-terracotta text-cream hover:bg-terracotta-dark border border-terracotta hover:border-terracotta-dark",
   };
 
   const sizes = {
